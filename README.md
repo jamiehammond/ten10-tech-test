@@ -25,6 +25,6 @@ Different browsers can be specified by editing the `browser.type` property in `l
 
 Cucumber reports are generated after executing tests, and can be found under `/target/cucumber-reports/cucumber-reports.html`
 
-## Observations of possible defects
+## Notes & Observations
 
-Although no 
+I spent roughly 2 hours on this task, and didn't manage to automate everything in the requirements - most notably testing of the mandatory fields. If I had more time, I would have ensured this was included in the test coverage.
