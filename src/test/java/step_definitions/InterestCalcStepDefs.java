@@ -133,7 +133,7 @@ public class InterestCalcStepDefs {
         double expectedInterest = enteredPrincipalAmount * interestRateDecimal * enteredDurationInYears;
         double expectedTotalAmount = enteredPrincipalAmount + expectedInterest;
         DecimalFormat decimalFormat = new DecimalFormat("0.00");
-        assertEquals(interestCalculatorPage.getInterestAmount(), decimalFormat.format(expectedInterest));
-        assertEquals(interestCalculatorPage.getTotalAmount(), decimalFormat.format(expectedTotalAmount));
+        assertEquals(interestCalculatorPage.getInterestAmount(), Double.parseDouble(decimalFormat.format(expectedInterest)));
+        assertEquals(interestCalculatorPage.getTotalAmount(), Double.parseDouble(decimalFormat.format(expectedTotalAmount)));
     }
 }
