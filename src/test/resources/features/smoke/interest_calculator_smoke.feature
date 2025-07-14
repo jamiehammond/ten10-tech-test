@@ -24,3 +24,6 @@ Feature: Interest calculator smoke tests
       | 100              | 1             | yearly   | true    |
       | 15000            | 15            | daily    | true    |
       | 7500             | 7             | monthly  | true    |
+      | 5000             | 10            | yearly   | true    |
+      | 5000             | 10            | daily    | true    |
+      | 5000             | 10            | monthly  | true    |
