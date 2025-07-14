@@ -27,4 +27,15 @@ Cucumber reports are generated after executing tests, and can be found under `/t
 
 ## Notes & Observations
 
-I spent roughly 2 hours on this task, and didn't manage to automate everything in the requirements - most notably testing of the mandatory fields. If I had more time, I would have ensured this was included in the test coverage.
+I spent roughly 2 hours on this task, and didn't manage to automate everything in the requirements - most notably testing of the mandatory fields. If I had more time, I would have ensured this was included in the test coverage
+
+### Defects:
+1. The 'Remember me' checkbox does not remember the user's login credentials after logging out
+2. Calculation of interest is often incorrect
+3. The 'Consent' checkbox is not mandatory
+
+### Observations / content errors:
+1. Image links are broken on the start page and login page
+3. 'Credentials' is mis-spelled on the login page, and a full-stop is added to the end of the header, which isn't consistent with the styling of other pages
+4. The 'RememberMe' checkbox on the login page should read 'Remember me'
+5. The website is generally not user-friendly, as per the requirements - various elements are difficult to interact with, for example: the slider to select principal amount rather than a text-box and the non-standard dropdown menu for the interest rate, with difficult to click checkboxes (again, rather than a text-box)
