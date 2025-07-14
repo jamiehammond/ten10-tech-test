@@ -37,14 +37,14 @@ public class RunSmokeTest extends AbstractTestNGCucumberTests {
         testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     }
 
-    @Test(groups = "cucumber parallel", description = "Runs Parallel enabled Scenarios", dataProvider = "parallelScenarios")
+    @Test(groups = "cucumber parallel", description = "Runs parallel enabled scenarios", dataProvider = "parallelScenarios")
     public void runParallelScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         DriverManager.getDriver().manage().deleteAllCookies();
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());
         DriverManager.quitDriver();
     }
 
-    @Test(groups = "cucumber serial", description = "Runs Scenarios with Serial tags", dataProvider = "serialScenarios")
+    @Test(groups = "cucumber serial", description = "Runs serial scenarios", dataProvider = "serialScenarios")
     public void runSerialScenario(PickleWrapper pickleWrapper, FeatureWrapper featureWrapper) {
         DriverManager.getDriver().manage().deleteAllCookies();
         testNGCucumberRunner.runScenario(pickleWrapper.getPickle());

@@ -1,5 +1,7 @@
 package framework.properties;
 
+import com.github.dockerjava.core.dockerfile.DockerfileStatement;
+import framework.environment.Environment;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.IOException;
@@ -15,6 +17,8 @@ public class PropertyLoader {
 
     static {
         propertiesFileConfigs = new HashSet<>();
+        String environment = Environment.getEnvironmentName();
+        registerPropertiesFileConfig(new PropertiesFileConfig("properties/" + environment + ".properties"));
     }
 
     public static String getProperty(String propertyKey) {

@@ -4,18 +4,18 @@ import framework.site.Site;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class StartPage extends Site {
+public class InterestCalculatorPage extends Site {
 
-    private static final String PAGE_HEADER = "Welcome to Ten10 Technical Test Website";
+    private static final String PAGE_HEADER = "Interest Calculator";
 
     @FindBy(css = "h1") private WebElement pageHeader;
-    @FindBy(css = "button.btn-secondary") private WebElement logInButton;
+    @FindBy(css = "button.nav-link") private WebElement logoutButton;
 
     public void verifyPageHeader() throws Exception {
         verifyTextInElement(PAGE_HEADER, pageHeader);
     }
 
-    public void clickLogInButton() {
-        clickOnElement(logInButton);
+    public void clickLogoutButton() {
+        clickOnElement(logoutButton);
     }
 }
