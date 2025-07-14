@@ -2,6 +2,7 @@ package framework.site;
 
 import lombok.extern.slf4j.Slf4j;
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -103,7 +104,9 @@ public class Site {
     public void clickOnElement(WebElement webElement) {
         try {
             webDriverWait().until(ExpectedConditions.elementToBeClickable(webElement));
-            ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", webElement);
+            Actions actions = new Actions(getDriver());
+            actions.scrollToElement(webElement);
+            actions.perform();
             webElement.click();
         } catch (Exception ex) {
             throw new NoSuchElementException("Cannot find or click on WebElement", ex);

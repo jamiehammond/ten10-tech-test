@@ -73,6 +73,7 @@ public class RunSmokeTest extends AbstractTestNGCucumberTests {
             return;
         }
         testNGCucumberRunner.finish();
+        DriverManager.quitDriver();
     }
 
     private Object[][] filter(Object[][] scenarios, Predicate<Pickle> accept) {
