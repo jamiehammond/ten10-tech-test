@@ -31,7 +31,7 @@ I spent roughly 2 hours on this task, and didn't manage to automate everything i
 
 ### Defects:
 1. The 'Remember me' checkbox does not remember the user's login credentials after logging out
-2. Calculation of interest is often incorrect
+2. Calculation of interest/total is often incorrect, and not to 2 decimal places
 3. The 'Consent' checkbox is not mandatory
 
 ### Observations / content errors:
